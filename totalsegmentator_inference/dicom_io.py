@@ -38,13 +38,6 @@ def download_dcm2niix():
     with zipfile.ZipFile(config_dir / "dcm2niix.zip", 'r') as zip_ref:
         zip_ref.extractall(config_dir)
 
-    # # Give execution permission to the script
-    # os.chmod(config_dir / "dcm2niix", 0o755)
-
-    # # Clean up
-    # os.remove(config_dir / "dcm2niix.zip")
-    # os.remove(config_dir / "dcm2niibatch")
-
 
 def dcm_to_nifti(input_path, output_path, verbose=False):
     """
